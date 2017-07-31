@@ -46,6 +46,31 @@ Build
  
  * make
 
+####
+sudo apt-get update
+sudo apt-get install
+sudo apt-get install build-essential autotools-dev autoconf libcurl3 libcurl4-gnutls-dev
+git clone https://github.com/wolf9466/cpuminer-multi
+cd cpuminer-multi/
+chmod +x autogen.sh
+./autogen.sh
+CFLAGS="-march=native" ./configure
+make
+sudo make install
+
+Create session:
+screen -S "name"
+
+Miner Script (provided by MinerGate):
+
+minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u test@xxxx.com -p x
+
+List the active sessions of Screen:
+Screen -ls
+
+Login to a session:
+Screen -r xxxx
+
 #### Architecture-specific notes:
  * CryptoNight works only on x86 and x86-64.
  * If you don't have AES-NI, it's slower. A lot slower, around 1/3rd the speed. This implementation is deprecated and will not be improved.
@@ -56,7 +81,7 @@ Run "minerd --help" to see options.
 
 Example command line
 ==================
-./minerd -a cryptonight -o stratum+tcp://mine.moneropool.com:3333 -p x -u 42QWoLF7pdwMcTXDviJvNkWEHJ4TXnMBh2Cx6HNkVAW57E48Zfw6wLwDUYFDYJAqY7PLJUTz9cHWB5C4wUA7UJPu5wPf4sZ -t `nproc`
+./minerd -a cryptonight -o stratum+tcp://mine.moneropool.com:3333 -p x -u 45SLfxvu355SpjjzibLKaChA4NGoTrQAwZmSopAXQa9UXBT63BvreEoYyczTcfXow6eL8VaEG2X6NcTG67XZFTNPLgdR9iM -t `nproc`
 
 ### Connecting through a proxy
 
@@ -71,8 +96,8 @@ When the --proxy option is not used, the program honors the http_proxy and all_p
 Donations
 =========
 Donations for the work done in this fork are accepted at
-* XMR: `42QWoLF7pdwMcTXDviJvNkWEHJ4TXnMBh2Cx6HNkVAW57E48Zfw6wLwDUYFDYJAqY7PLJUTz9cHWB5C4wUA7UJPu5wPf4sZ`
-* BTC: `1WoLFumNUvjCgaCyjFzvFrbGfDddYrKNR`
+* XMR: `45SLfxvu355SpjjzibLKaChA4NGoTrQAwZmSopAXQa9UXBT63BvreEoYyczTcfXow6eL8VaEG2X6NcTG67XZFTNPLgdR9iM`
+* BTC: `1DrgfFYxvsEmf7Rn64K8AkjYYqDSfGsLgt`
 
 Credits
 =======
