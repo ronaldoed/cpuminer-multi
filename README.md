@@ -50,13 +50,13 @@ Build
 * sudo apt-get update
 * sudo apt-get install
 * sudo apt-get install build-essential autotools-dev autoconf libcurl3 libcurl4-gnutls-dev
-git clone https://github.com/wolf9466/cpuminer-multi
-cd cpuminer-multi/
-chmod +x autogen.sh
-./autogen.sh
-CFLAGS="-march=native" ./configure
-make
-sudo make install
+* git clone https://github.com/wolf9466/cpuminer-multi
+* cd cpuminer-multi/
+* chmod +x autogen.sh
+* ./autogen.sh
+* CFLAGS="-march=native" ./configure
+* make
+* sudo make install
 
 Create session:
 screen -S "name"
