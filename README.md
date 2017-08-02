@@ -76,7 +76,7 @@ screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u 
 
 screen ./minerd -a cryptonight -o stratum+tcp://fcn-xmr.pool.minergate.com:45590 -u test@xxxx.com -p x
 
-hash
+#hash
 screen ./minerd -a cryptonight -o stratum+tcp://fcn-xmr.pool.minergate.com:45590 -u test@xxxx.com -p x
 
 #### Architecture-specific notes:
