@@ -71,6 +71,14 @@ Screen -ls
 Login to a session:
 Screen -r xxxx
 
+
+screen ./minerd -a cryptonight -o stratum+tcp://bcn.pool.minergate.com:45550 -u seu email -p x 
+
+screen ./minerd -a cryptonight -o stratum+tcp://fcn-xmr.pool.minergate.com:45590 -u seu@email -p x
+
+hash
+screen ./minerd -a cryptonight -o stratum+tcp://fcn-xmr.pool.minergate.com:45590 -u seu@email -p x
+
 #### Architecture-specific notes:
  * CryptoNight works only on x86 and x86-64.
  * If you don't have AES-NI, it's slower. A lot slower, around 1/3rd the speed. This implementation is deprecated and will not be improved.
